@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/yolo_in_the_browser/static/css/main.f855e6bc.css",
-    "main.js": "/yolo_in_the_browser/static/js/main.3b44612c.js",
-    "static/js/453.ad6eb26e.chunk.js": "/yolo_in_the_browser/static/js/453.ad6eb26e.chunk.js",
-    "static/media/logo.svg": "/yolo_in_the_browser/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/yolo_in_the_browser/static/css/main.9b2e7bbf.css",
+    "main.js": "/yolo_in_the_browser/static/js/main.e96e1009.js",
     "index.html": "/yolo_in_the_browser/index.html",
-    "main.f855e6bc.css.map": "/yolo_in_the_browser/static/css/main.f855e6bc.css.map",
-    "main.3b44612c.js.map": "/yolo_in_the_browser/static/js/main.3b44612c.js.map",
-    "453.ad6eb26e.chunk.js.map": "/yolo_in_the_browser/static/js/453.ad6eb26e.chunk.js.map"
+    "main.9b2e7bbf.css.map": "/yolo_in_the_browser/static/css/main.9b2e7bbf.css.map",
+    "main.e96e1009.js.map": "/yolo_in_the_browser/static/js/main.e96e1009.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.3b44612c.js"
+    "static/css/main.9b2e7bbf.css",
+    "static/js/main.e96e1009.js"
   ]
 }
