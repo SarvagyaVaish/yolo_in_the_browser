@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://sarvagyavaish.github.io/yolo_in_the_browser/",
   "dependencies": {
+    "@tensorflow/tfjs": "^4.20.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
