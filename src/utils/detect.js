@@ -45,7 +45,7 @@ const preprocess = (source, modelWidth, modelHeight) => {
  * @param {HTMLCanvasElement} canvasRef canvas reference
  * @param {VoidFunction} callback function to run after detection process
  */
-export const detect = async (source, model, canvasRef, callback = () => {}) => {
+export const detect = async (source, model, canvasRef, callback = () => { }) => {
   const startTime = Date.now();
 
   const [modelWidth, modelHeight] = model.inputShape.slice(1, 3); // get model width and height
@@ -82,9 +82,9 @@ export const detect = async (source, model, canvasRef, callback = () => {}) => {
   const nms = await tf.image.nonMaxSuppressionAsync(
     boxes,
     scores,
-    500,
-    0.45,
-    0.2
+    5,
+    0.15,
+    0.9
   ); // NMS to filter boxes
 
   const boxes_data = boxes.gather(nms, 0).dataSync(); // indexing boxes by nms index

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as tf from "@tensorflow/tfjs";
 import "@tensorflow/tfjs-backend-webgl"; // set backend to webgl
-import Loader from "./components/loader";
 import ButtonHandler from "./components/btn-handler";
 import { detect, detectVideo } from "./utils/detect";
 import "./style/App.css";
@@ -20,12 +19,12 @@ const App = () => {
   const canvasRef = useRef(null);
 
   // model configs
-  const modelName = "yolov8n";
+  const modelName = "cones_yolov8s";
 
   useEffect(() => {
     tf.ready().then(async () => {
       const yolov8 = await tf.loadGraphModel(
-        `${window.location.href}/${modelName}_web_model/model.json`,
+        `${window.location.href}/${modelName}/model.json`,
         {
           onProgress: (fractions) => {
             setLoading({ loading: true, progress: fractions }); // set loading fractions
@@ -49,15 +48,21 @@ const App = () => {
 
   return (
     <div className="App">
-      {loading.loading && (
-        <Loader>Loading model... {(loading.progress * 100).toFixed(2)}%</Loader>
-      )}
       <div className="header">
         <h3>YOLOv8 Object Detection</h3>
-        <br />
+        {/* <br />
         <p>
           Model : <code className="code">{modelName}</code>
-        </p>
+        </p> */}
+      </div>
+
+      <div>
+        {loading.loading && (
+          <div>Loading model... {(loading.progress * 100).toFixed(2)}%</div>
+        )}
+        {!loading.loading && (
+          <div>Model ready!</div>
+        )}
       </div>
 
       <div className="content">
