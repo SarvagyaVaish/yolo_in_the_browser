@@ -45,6 +45,7 @@ const ButtonHandler = ({ imageRef, cameraRef, videoRef }) => {
         ref={inputImageRef}
       />
       <button
+        style={{ fontSize: '16px' }}
         onClick={() => {
           // if not streaming
           if (streaming === null) inputImageRef.current.click();
@@ -75,6 +76,7 @@ const ButtonHandler = ({ imageRef, cameraRef, videoRef }) => {
         ref={inputVideoRef}
       />
       <button
+        style={{ fontSize: '16px' }}
         onClick={() => {
           // if not streaming
           if (streaming === null || streaming === "image")
@@ -92,6 +94,7 @@ const ButtonHandler = ({ imageRef, cameraRef, videoRef }) => {
 
       {/* Webcam Handler */}
       <button
+        style={{ fontSize: '16px' }}
         onClick={() => {
           // if not streaming
           if (streaming === null || streaming === "image") {

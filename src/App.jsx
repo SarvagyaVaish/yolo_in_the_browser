@@ -49,20 +49,11 @@ const App = () => {
   return (
     <div className="App">
       <div className="header">
-        <h3>YOLOv8 Object Detection</h3>
+        <h2>YOLOv8 Cone Detection</h2>
         {/* <br />
         <p>
           Model : <code className="code">{modelName}</code>
         </p> */}
-      </div>
-
-      <div>
-        {loading.loading && (
-          <div>Loading model... {(loading.progress * 100).toFixed(2)}%</div>
-        )}
-        {!loading.loading && (
-          <div>Model ready!</div>
-        )}
       </div>
 
       <div className="content">
@@ -92,6 +83,21 @@ const App = () => {
           ref={canvasRef}
         />
       </div>
+
+      <br />
+
+      <div>
+        {loading.loading && (
+          <p style={{ color: 'gray' }}>Loading model... {(loading.progress * 100).toFixed(2)}%</p>
+        )}
+        {!loading.loading && (
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+            <p style={{ color: 'gray' }}>Use the buttons below to detect cones in an image, video, or <strong>live camera</strong> feed.</p>
+          </div>
+        )}
+      </div>
+
+      <br />
 
       <ButtonHandler
         imageRef={imageRef}
