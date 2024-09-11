@@ -115,7 +115,7 @@ const ButtonHandler = ({ imageRef, cameraRef, videoRef }) => {
             ); // if streaming video
         }}
       >
-        {streaming === "camera" ? "Close" : "Open"} Webcam
+        {streaming === "camera" ? "Close" : "Open"} Camera
       </button>
     </div>
   );
